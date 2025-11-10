@@ -1,0 +1,104 @@
+14:01:40.875 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.webCof.uniqueApp.UniqueAppApplicationTests]: UniqueAppApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+14:01:41.080 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.webCof.uniqueApp.JournalApplication for test class com.webCof.uniqueApp.UniqueAppApplicationTests
+14:01:41.770 [main] INFO  c.w.u.UniqueAppApplicationTests - Starting UniqueAppApplicationTests using Java 21.0.3 with PID 4072 (started by Admin in D:\JavaProjects\Spring\uniqueApp)
+14:01:41.771 [main] INFO  c.w.u.UniqueAppApplicationTests - The following 1 profile is active: "dev"
+14:01:42.765 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+14:01:42.829 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 59 ms. Found 2 MongoDB repository interfaces.
+14:01:43.499 [cluster-ClusterId{value='68d4fdef3c5aeea891a2ff3f', description='Cluster0'}-srv-cluster0.wwn8ujw.mongodb.net] INFO  org.mongodb.driver.cluster - Adding discovered server ac-rutjswb-shard-00-02.wwn8ujw.mongodb.net:27017 to client view of cluster
+14:01:43.611 [main] INFO  org.mongodb.driver.client - MongoClient with metadata {"application": {"name": "Cluster0"}, "driver": {"name": "mongo-java-driver|sync|spring-boot", "version": "5.5.1"}, "os": {"type": "Windows", "name": "Windows 11", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/21.0.3+7-LTS-152"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=majority, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=MongoCredential{mechanism=null, userName='udaykumarkella67', source='admin', password=<hidden>, mechanismProperties=<hidden>}, transportSettings=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@42c12b3e, com.mongodb.Jep395RecordCodecProvider@2dbfa972, com.mongodb.KotlinCodecProvider@46f73ffa]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[127.0.0.1:27017], srvHost=cluster0.wwn8ujw.mongodb.net, srvServiceName=mongodb, mode=MULTIPLE, requiredClusterType=REPLICA_SET, requiredReplicaSetName='atlas-oar7g5-shard-0', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverMonitoringMode=AUTO, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=true, invalidHostNameAllowed=false, context=null}, applicationName='Cluster0', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null, timeoutMS=null}
+14:01:43.722 [cluster-ClusterId{value='68d4fdef3c5aeea891a2ff3f', description='Cluster0'}-srv-cluster0.wwn8ujw.mongodb.net] INFO  org.mongodb.driver.cluster - Adding discovered server ac-rutjswb-shard-00-00.wwn8ujw.mongodb.net:27017 to client view of cluster
+14:01:43.735 [cluster-ClusterId{value='68d4fdef3c5aeea891a2ff3f', description='Cluster0'}-srv-cluster0.wwn8ujw.mongodb.net] INFO  org.mongodb.driver.cluster - Adding discovered server ac-rutjswb-shard-00-01.wwn8ujw.mongodb.net:27017 to client view of cluster
+14:01:45.084 [main] INFO  org.mongodb.driver.cluster - Waiting for server to become available for operation with ID 5. Remaining time: 29986 ms. Selector: WritableServerSelector, topology description: {type=REPLICA_SET, servers=[{address=ac-rutjswb-shard-00-00.wwn8ujw.mongodb.net:27017, type=UNKNOWN, state=CONNECTING}, {address=ac-rutjswb-shard-00-01.wwn8ujw.mongodb.net:27017, type=UNKNOWN, state=CONNECTING}, {address=ac-rutjswb-shard-00-02.wwn8ujw.mongodb.net:27017, type=UNKNOWN, state=CONNECTING}].
+14:01:45.139 [cluster-ClusterId{value='68d4fdef3c5aeea891a2ff3f', description='Cluster0'}-ac-rutjswb-shard-00-00.wwn8ujw.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server ac-rutjswb-shard-00-00.wwn8ujw.mongodb.net:27017
+com.mongodb.MongoSocketWriteException: Exception sending message
+	at com.mongodb.internal.connection.InternalStreamConnection.throwTranslatedWriteException(InternalStreamConnection.java:785)
+	at com.mongodb.internal.connection.InternalStreamConnection.sendMessage(InternalStreamConnection.java:670)
+	at com.mongodb.internal.connection.InternalStreamConnection.trySendMessage(InternalStreamConnection.java:507)
+	at com.mongodb.internal.connection.InternalStreamConnection.sendCommandMessage(InternalStreamConnection.java:482)
+	at com.mongodb.internal.connection.InternalStreamConnection.sendAndReceiveInternal(InternalStreamConnection.java:440)
+	at com.mongodb.internal.connection.InternalStreamConnection.lambda$sendAndReceive$0(InternalStreamConnection.java:375)
+	at com.mongodb.internal.connection.InternalStreamConnection.sendAndReceive(InternalStreamConnection.java:378)
+	at com.mongodb.internal.connection.CommandHelper.sendAndReceive(CommandHelper.java:100)
+	at com.mongodb.internal.connection.CommandHelper.executeCommand(CommandHelper.java:49)
+	at com.mongodb.internal.connection.InternalStreamConnectionInitializer.initializeConnectionDescription(InternalStreamConnectionInitializer.java:144)
+	at com.mongodb.internal.connection.InternalStreamConnectionInitializer.startHandshake(InternalStreamConnectionInitializer.java:79)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:235)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:219)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:176)
+Caused by: javax.net.ssl.SSLException: Received fatal alert: internal_error
+	at java.base/sun.security.ssl.Alert.createSSLException(Alert.java:132)
+	at java.base/sun.security.ssl.Alert.createSSLException(Alert.java:117)
+	at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:365)
+	at java.base/sun.security.ssl.Alert$AlertConsumer.consume(Alert.java:287)
+	at java.base/sun.security.ssl.TransportContext.dispatch(TransportContext.java:204)
+	at java.base/sun.security.ssl.SSLTransport.decode(SSLTransport.java:172)
+	at java.base/sun.security.ssl.SSLSocketImpl.decode(SSLSocketImpl.java:1506)
+	at java.base/sun.security.ssl.SSLSocketImpl.readHandshakeRecord(SSLSocketImpl.java:1421)
+	at java.base/sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:455)
+	at java.base/sun.security.ssl.SSLSocketImpl.ensureNegotiated(SSLSocketImpl.java:922)
+	at java.base/sun.security.ssl.SSLSocketImpl$AppOutputStream.write(SSLSocketImpl.java:1291)
+	at com.mongodb.internal.connection.SocketStream.write(SocketStream.java:165)
+	at com.mongodb.internal.connection.InternalStreamConnection.sendMessage(InternalStreamConnection.java:667)
+	... 12 common frames omitted
+14:01:45.138 [cluster-ClusterId{value='68d4fdef3c5aeea891a2ff3f', description='Cluster0'}-ac-rutjswb-shard-00-01.wwn8ujw.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server ac-rutjswb-shard-00-01.wwn8ujw.mongodb.net:27017
+com.mongodb.MongoSocketWriteException: Exception sending message
+	at com.mongodb.internal.connection.InternalStreamConnection.throwTranslatedWriteException(InternalStreamConnection.java:785)
+	at com.mongodb.internal.connection.InternalStreamConnection.sendMessage(InternalStreamConnection.java:670)
+	at com.mongodb.internal.connection.InternalStreamConnection.trySendMessage(InternalStreamConnection.java:507)
+	at com.mongodb.internal.connection.InternalStreamConnection.sendCommandMessage(InternalStreamConnection.java:482)
+	at com.mongodb.internal.connection.InternalStreamConnection.sendAndReceiveInternal(InternalStreamConnection.java:440)
+	at com.mongodb.internal.connection.InternalStreamConnection.lambda$sendAndReceive$0(InternalStreamConnection.java:375)
+	at com.mongodb.internal.connection.InternalStreamConnection.sendAndReceive(InternalStreamConnection.java:378)
+	at com.mongodb.internal.connection.CommandHelper.sendAndReceive(CommandHelper.java:100)
+	at com.mongodb.internal.connection.CommandHelper.executeCommand(CommandHelper.java:49)
+	at com.mongodb.internal.connection.InternalStreamConnectionInitializer.initializeConnectionDescription(InternalStreamConnectionInitializer.java:144)
+	at com.mongodb.internal.connection.InternalStreamConnectionInitializer.startHandshake(InternalStreamConnectionInitializer.java:79)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:235)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:219)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:176)
+Caused by: javax.net.ssl.SSLException: Received fatal alert: internal_error
+	at java.base/sun.security.ssl.Alert.createSSLException(Alert.java:132)
+	at java.base/sun.security.ssl.Alert.createSSLException(Alert.java:117)
+	at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:365)
+	at java.base/sun.security.ssl.Alert$AlertConsumer.consume(Alert.java:287)
+	at java.base/sun.security.ssl.TransportContext.dispatch(TransportContext.java:204)
+	at java.base/sun.security.ssl.SSLTransport.decode(SSLTransport.java:172)
+	at java.base/sun.security.ssl.SSLSocketImpl.decode(SSLSocketImpl.java:1506)
+	at java.base/sun.security.ssl.SSLSocketImpl.readHandshakeRecord(SSLSocketImpl.java:1421)
+	at java.base/sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:455)
+	at java.base/sun.security.ssl.SSLSocketImpl.ensureNegotiated(SSLSocketImpl.java:922)
+	at java.base/sun.security.ssl.SSLSocketImpl$AppOutputStream.write(SSLSocketImpl.java:1291)
+	at com.mongodb.internal.connection.SocketStream.write(SocketStream.java:165)
+	at com.mongodb.internal.connection.InternalStreamConnection.sendMessage(InternalStreamConnection.java:667)
+	... 12 common frames omitted
+14:01:45.144 [cluster-ClusterId{value='68d4fdef3c5aeea891a2ff3f', description='Cluster0'}-ac-rutjswb-shard-00-02.wwn8ujw.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server ac-rutjswb-shard-00-02.wwn8ujw.mongodb.net:27017
+com.mongodb.MongoSocketWriteException: Exception sending message
+	at com.mongodb.internal.connection.InternalStreamConnection.throwTranslatedWriteException(InternalStreamConnection.java:785)
+	at com.mongodb.internal.connection.InternalStreamConnection.sendMessage(InternalStreamConnection.java:670)
+	at com.mongodb.internal.connection.InternalStreamConnection.trySendMessage(InternalStreamConnection.java:507)
+	at com.mongodb.internal.connection.InternalStreamConnection.sendCommandMessage(InternalStreamConnection.java:482)
+	at com.mongodb.internal.connection.InternalStreamConnection.sendAndReceiveInternal(InternalStreamConnection.java:440)
+	at com.mongodb.internal.connection.InternalStreamConnection.lambda$sendAndReceive$0(InternalStreamConnection.java:375)
+	at com.mongodb.internal.connection.InternalStreamConnection.sendAndReceive(InternalStreamConnection.java:378)
+	at com.mongodb.internal.connection.CommandHelper.sendAndReceive(CommandHelper.java:100)
+	at com.mongodb.internal.connection.CommandHelper.executeCommand(CommandHelper.java:49)
+	at com.mongodb.internal.connection.InternalStreamConnectionInitializer.initializeConnectionDescription(InternalStreamConnectionInitializer.java:144)
+	at com.mongodb.internal.connection.InternalStreamConnectionInitializer.startHandshake(InternalStreamConnectionInitializer.java:79)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:235)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:219)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:176)
+Caused by: javax.net.ssl.SSLException: Received fatal alert: internal_error
+	at java.base/sun.security.ssl.Alert.createSSLException(Alert.java:132)
+	at java.base/sun.security.ssl.Alert.createSSLException(Alert.java:117)
+	at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:365)
+	at java.base/sun.security.ssl.Alert$AlertConsumer.consume(Alert.java:287)
+	at java.base/sun.security.ssl.TransportContext.dispatch(TransportContext.java:204)
+	at java.base/sun.security.ssl.SSLTransport.decode(SSLTransport.java:172)
+	at java.base/sun.security.ssl.SSLSocketImpl.decode(SSLSocketImpl.java:1506)
+	at java.base/sun.security.ssl.SSLSocketImpl.readHandshakeRecord(SSLSocketImpl.java:1421)
+	at java.base/sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:455)
+	at java.base/sun.security.ssl.SSLSocketImpl.ensureNegotiated(SSLSocketImpl.java:922)
+	at java.base/sun.security.ssl.SSLSocketImpl$AppOutputStream.write(SSLSocketImpl.java:1291)
+	at com.mongodb.internal.connection.SocketStream.write(SocketStream.java:165)
+	at com.mongodb.internal.connection.InternalStreamConnection.sendMessage(InternalStreamConnection.java:667)
+	... 12 common frames omitted
