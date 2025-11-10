@@ -1,43 +1,28 @@
 package com.webCof.uniqueApp.entity;
 
+
+import lombok.*;
+import org.bson.types.ObjectId;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+import java.time.LocalDateTime;
+import java.util.Date;
+
+//@Setter
+//@Getter
+@Data
+@NoArgsConstructor
+@Document(collection = "journal_entries")
 public class JournalEntry {
 
-    private int id;
+    @Id
+    private ObjectId id;
 
+    @NonNull
     private String title;
 
-    private String Content;
+    private String content;
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public String getContent() {
-        return Content;
-    }
-
-    public void setContent(String content) {
-        Content = content;
-    }
-
-    @Override
-    public String toString() {
-        return "JournalEntry{" +
-                "id=" + id +
-                ", title='" + title + '\'' +
-                ", Content='" + Content + '\'' +
-                '}';
-    }
+    private LocalDateTime date;
 }

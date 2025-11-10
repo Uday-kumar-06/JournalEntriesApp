@@ -1,0 +1,29 @@
+🟢 Redis Installation:
+
+-->>(Type in In wsl command:)
+
+
+
+curl -fsSL https://packages.redis.io/gpg | sudo gpg --dearmor -o /usr/share/keyrings/redis-archive-keyring.gpg
+
+
+
+echo "deb [signed-by=/usr/share/keyrings/redis-archive-keyring.gpg] https://packages.redis.io/deb $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/redis.list
+
+
+
+sudo apt-get update
+
+
+sudo apt-get install redis
+
+
+---->//the below steps are mandatory for starting the server
+     //the above steps are just for installation once installed
+     //no need to use them again and again..
+
+
+sudo service redis-server start
+
+
+redis-cli

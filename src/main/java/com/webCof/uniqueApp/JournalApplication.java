@@ -3,15 +3,35 @@ package com.webCof.uniqueApp;
 import com.webCof.uniqueApp.entity.JournalEntry;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.context.annotation.Bean;
+import org.springframework.data.mongodb.MongoDatabaseFactory;
+import org.springframework.data.mongodb.MongoTransactionManager;
+import org.springframework.transaction.PlatformTransactionManager;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
+import org.springframework.web.client.RestTemplate;
 
 @SpringBootApplication
+@EnableTransactionManagement
 public class JournalApplication {
 
 	public static void main(String[] args) {
-
-		SpringApplication.run(JournalApplication.class, args);
-		JournalEntry e1 = new JournalEntry();
-		System.out.println(e1);
+        SpringApplication.run(JournalApplication.class, args);
+        System.out.print("finsih");
 	}
 
+    @Bean
+    public PlatformTransactionManager add(MongoDatabaseFactory dbFactory){
+        return new MongoTransactionManager(dbFactory);
+    }
+
+    @Bean
+    public RestTemplate restTemplate(){
+        return new RestTemplate();
+    }
+
+
 }
+
+//platformTransactionManager
+//MongoTransactionManager

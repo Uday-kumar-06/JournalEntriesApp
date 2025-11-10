@@ -1,0 +1,15 @@
+go to D-->disk
+window power shell:
+->    cd D:\Program-Disk\sonarqube-9.9.8.100196\bin\windows-x86-64
+
+->    .\StartSonar.bat
+
+Intellij terminal:
+
+->  .\mvnw clean install
+
+->   .\mvnw sonar:sonar "-Dsonar.host.url=http://localhost:9000" "-Dsonar.login=YOUR_GENERATED_TOKEN"
+
+            we can get YOUR_GENERATED_TOKEN from profile-> account-> security -> generate token  (squ_862b33919802bf6486772dbc2b5f9e0cd4dbee78)
+
+
